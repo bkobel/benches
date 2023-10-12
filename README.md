@@ -1,4 +1,4 @@
 # benches
 
 Run
-``` rustc main.rs && ./main ```
+``` ./execute.sh -f -m ```
