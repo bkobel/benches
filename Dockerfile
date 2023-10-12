@@ -15,11 +15,12 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     cmake \
     python2
 
-WORKDIR /src
+WORKDIR /tools
+RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+ENV PATH "$PATH:/tools/depot_tools"
 
-RUN cd /src && git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-ENV PATH "$PATH:/src/depot_tools"
-RUN fetch --nohooks chromium && gclient runhooks
+WORKDIR /src
+RUN fetch --nohooks --nohistory chromium && gclient runhooks
 
 RUN echo 'is_debug = false\n\
 symbol_level = 0\n\
