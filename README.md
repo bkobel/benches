@@ -6,7 +6,7 @@
 
 ## Results
 
-| CPU Model    | Logical Cores | Fibonacci(47) x32 | Matrices(250) 2k*2k   |
+| CPU Model    | Logical Cores | Fibonacci(47) t32 | Matrices(250) 2k*2k   |
 |--------------|---------------|-------------------|-----------------------|
 | 7700x        | 16            | 6.739226829s      | 68.590633101s         |
 | i9-13900k    | 32            | 2.9828701s        | 64.4862996s           |
